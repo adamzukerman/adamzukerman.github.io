@@ -1,9 +1,19 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Hello!</title>
-    </head>
-    <body>
-        <h3>ASDF</h3>
-    </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tone Controller</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <button id="toggleButton">Toggle Tone</button>
+        <div>
+            <label for="pitchSlider">Pitch: </label>
+            <input type="range" id="pitchSlider" min="20" max="2000" value="440">
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
 </html>
