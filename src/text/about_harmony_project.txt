@@ -1,2 +1,1 @@
-Have you ever wondered how dissonance in music resolves into harmony? Describing dissonance we hear using mathematical funcitons can be a difficult task.
-This program tests one way to define that dissonance and how effectively it can be resolved using multi-variable optimization over a function that models dissonance.
+Have you ever wondered how dissonance in music resolves into harmony? Describing dissonance we hear using mathematical funcitons can be a difficult task. This program tests one way to define that dissonance and how effectively it can be resolved using multi-variable optimization over a function that models dissonance.
