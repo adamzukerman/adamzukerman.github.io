@@ -1,0 +1,105 @@
+/* Adam Zukerman — Site Styles (extracted)
+   - Robust theming (dark/light) without color-mix for Safari compatibility
+   - Small, readable CSS with utility classes for inputs/buttons/cards
+*/
+
+/* ——— Design tokens ——— */
+:root {
+  /* Dark (default) */
+  --bg: #0b0d10;
+  --surface: #14181d;
+  --text: #e6ecf2;
+  --muted: #9fb3c8;
+  --accent: #5cb3ff;
+  --card: #0f1216;
+  --ring: #294b72;
+  --border: rgba(230, 236, 242, 0.12); /* subtle light border on dark */
+}
+
+:root[data-theme="light"]{
+  --bg: #ffffff;
+  --surface: #f3f6f9;
+  --text: #0f1720;
+  --muted: #425466;
+  --accent: #1869d6;
+  --card: #ffffff;
+  --ring: #b7d7ff;
+  --border: rgba(15, 23, 32, 0.12); /* subtle dark border on light */
+}
+
+/* Optional: respect OS preference on first load if no saved theme */
+@media (prefers-color-scheme: light){
+  :root:not([data-theme]){
+    --bg: #ffffff;
+    --surface: #f3f6f9;
+    --text: #0f1720;
+    --muted: #425466;
+    --accent: #1869d6;
+    --card: #ffffff;
+    --ring: #b7d7ff;
+    --border: rgba(15, 23, 32, 0.12);
+  }
+}
+
+/* ——— Base ——— */
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+img { max-width: 100%; height: auto; display: block; }
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.container { width: min(1100px, 92vw); margin-inline: auto; }
+
+/* ——— Header / Nav ——— */
+header {
+  position: sticky; top: 0; z-index: 10;
+  backdrop-filter: blur(8px);
+  background-color: var(--bg); /* fallback safe */
+  border-bottom: 1px solid var(--border);
+}
+.nav { display: flex; align-items: center; justify-content: space-between; padding: .75rem 0; }
+.brand { font-weight: 700; letter-spacing: .2px; }
+.nav ul { display: flex; gap: 1rem; list-style: none; padding: 0; margin: 0; }
+.nav a { padding: .5rem .75rem; border-radius: .75rem; }
+.nav a:hover { background-color: rgba(92,179,255,0.12); text-decoration: none; }
+.theme-toggle { border: 1px solid var(--border); background: var(--surface); color: var(--text); padding: .45rem .7rem; border-radius: .6rem; cursor: pointer; }
+
+/* ——— Hero ——— */
+.hero { padding: 5rem 0 3rem; }
+.hero h1 { font-size: clamp(2rem, 5vw, 3rem); margin: 0 0 .5rem; }
+.hero p { color: var(--muted); margin: 0 0 1.25rem; max-width: 60ch; }
+.tags { display: flex; flex-wrap: wrap; gap: .5rem; margin: 1rem 0 1.5rem; }
+.tag { border: 1px solid var(--border); padding: .35rem .6rem; border-radius: 999px; font-size: .85rem; }
+.cta { display: flex; gap: .75rem; flex-wrap: wrap; }
+.btn { display: inline-block; padding: .7rem 1rem; border-radius: .8rem; border: 1px solid var(--border); background: var(--surface); color: var(--text); font-weight: 600; }
+.btn.primary { background: var(--accent); color: #fff; border-color: var(--accent); }
+
+/* ——— Sections ——— */
+section { padding: 3rem 0; border-top: 1px solid var(--border); background-color: var(--bg); }
+section h2 { margin-top: 0; font-size: clamp(1.4rem, 3.2vw, 2rem); }
+.grid { display: grid; gap: 1rem; }
+.grid.cards { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+.card { background: var(--card); padding: 1rem; border-radius: 1rem; border: 1px solid var(--border); }
+.card h3 { margin: .25rem 0 .35rem; font-size: 1.05rem; }
+.muted { color: var(--muted); }
+
+/* ——— Forms ——— */
+.input, .textarea {
+  width: 100%; padding: .6rem; border-radius: .6rem;
+  border: 1px solid var(--border); background: var(--surface); color: var(--text);
+}
+.textarea { min-height: 6rem; }
+
+/* ——— Footer ——— */
+footer { padding: 2rem 0; border-top: 1px solid var(--border); color: var(--muted); background-color: var(--bg); }
+
+/* ——— Responsive helpers ——— */
+@media (min-width: 900px){ .heroCols { display: grid; grid-template-columns: 3fr 2fr; gap: 2rem; align-items: center; } }
