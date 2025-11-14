@@ -223,7 +223,7 @@ section h2 {
   height: 140px;
   /* whatever height works */
   border-radius: 0.5rem;
-  background: var(--muted);
+  background: var(--surface);
   display: flex;
   align-items: center;
   justify-content: center;
