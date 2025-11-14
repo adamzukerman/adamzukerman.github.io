@@ -1,188 +1,219 @@
-  <link rel="stylesheet" href="/assets/styles.css" />
+<link rel="stylesheet" href="/assets/styles.css" />
 </head>
+
 <body>
-  <header>
-    <div class="container nav" role="navigation" aria-label="Primary">
-      <div class="brand">Adam Zukerman</div>
-      <nav>
-        <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#resume">Resume</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-      <button class="theme-toggle" id="themeToggle" aria-label="Toggle color theme">Theme</button>
-    </div>
-  </header>
-
-  <main>
-    <!-- Hero / Intro -->
-    <section class="hero">
-      <div class="container heroCols">
-        <div>
-          <h1>Data Scientist - ML, Forecasting & Data Platforms</h1>
-          <p>
-            I design and deploy data products that drive measurable outcomes. At Nielsen, I led work that enabled <strong>$7.2M/year</strong> in savings by optimizing survey operations with ML, forecasting, and constrained optimization.
-          </p>
-          <div class="tags" aria-label="Key skills">
-            <span class="tag">Python</span>
-            <span class="tag">SQL</span>
-            <span class="tag">DBT</span>
-            <span class="tag">Postgres</span>
-            <span class="tag">AWS</span>
-            <span class="tag">scikit-learn</span>
-            <span class="tag">PyTorch</span>
-            <span class="tag">Forecasting</span>
-            <span class="tag">Tableau</span>
-          </div>
-          <div class="cta">
-            <a class="btn primary" href="#contact">Contact Me</a>
-            <a class="btn" href="#resume">View Resume</a>
-            <a class="btn" href="/assets/resumes/resume.pdf" download>Download PDF</a>
-          </div>
+    <header>
+        <div class="container nav" role="navigation" aria-label="Primary">
+            <div class="brand">Adam Zukerman</div>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#resume">Resume</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle color theme">Theme</button>
         </div>
-        <div>
-          <!-- Optional headshot or illustrative graphic -->
-          <div class="card">
-	    <img src="/assets/images/ghibli_headshot.png"jpg alt="Adam Zukerman headshot" style="width:100%; border-radius:1rem;" />
-	    <!--<p class="muted">Add a headshot or illustration here. Ideal size ~ 640×640.</p>-->
-          </div>
+    </header>
+
+    <main>
+        <!-- Hero / Intro -->
+        <section class="hero">
+            <div class="container heroCols">
+                <div>
+                    <h1>Data Scientist - ML, Forecasting & Data Platforms</h1>
+                    <p>
+                        I build data products that tighten feedback loops between forecasts, operations, and cost. At
+                        Nielsen I paired ML sampling, constraint modeling, and lightweight tooling so survey teams could
+                        hit targets with less spend and less guesswork.
+                    </p>
+
+                    </p>
+                    <div class="tags" aria-label="Key skills">
+                        <span class="tag">Machine Learning</span>
+                        <span class="tag">Artificial Intelligence</span>
+                        <span class="tag">Data Visualization</span>
+                        <span class="tag">Data Management</span>
+                        <span class="tag">AWS</span>
+                        <span class="tag">Python</span>
+                        <span class="tag">SQL</span>
+                        <span class="tag">DBT</span>
+                        <span class="tag">PyTorch</span>
+                        <span class="tag">Forecasting</span>
+                    </div>
+                    <div class="cta">
+                        <a class="btn primary" href="#contact">Contact Me</a>
+                        <a class="btn" href="#resume">View Resume</a>
+                        <a class="btn" href="/assets/resumes/resume.pdf" download>Download PDF</a>
+                    </div>
+                </div>
+                <div>
+                    <!-- Optional headshot or illustrative graphic -->
+                    <div class="card">
+                        <img src="/assets/images/ghibli_headshot.png" jpg alt="Adam Zukerman headshot"
+                            style="width:100%; border-radius:1rem;" />
+                        <!--<p class="muted">Add a headshot or illustration here. Ideal size ~ 640×640.</p>-->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About -->
+        <section id="about" aria-labelledby="about-h">
+            <div class="container">
+                <section id="about" aria-labelledby="about-h">
+                    <div class="container">
+                        <h2 id="about-h">About</h2>
+                        <div class="grid" style="grid-template-columns: 2fr 1fr; gap: 1.5rem;">
+                            <div>
+                                <p>
+                                    I'm a data scientist with a computer science and math foundation who gravitates
+                                    toward measurement problems that
+                                    have real operational impact. Most of my work lives at the intersection of
+                                    forecasting, optimization, and the
+                                    tooling that keeps multi-team programs on track.
+                                </p>
+                                <p class="muted">
+                                    I still carve out time for long-form learning in areas like systems, databases, and
+                                    ML—and for
+                                    audio/visual side projects,
+                                </p>
+                            </div>
+                            <aside class="card" aria-label="Highlights">
+                                <h3>Highlights</h3>
+                                <ul>
+                                    <li>Rolled out ML-driven sampling changes that cut survey spend by millions
+                                        annually.</li>
+                                    <li>Led cross-functional forecast reviews on metrics that drive multiple cost
+                                        centers.</li>
+                                    <li>Built monitoring dashboards so ops teams can spot data quality drift quickly.
+                                    </li>
+                                    <li>Mentored teammates and onboarded new data scientists into production workflows.
+                                    </li>
+                                </ul>
+                            </aside>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </section>
+
+        <!-- Projects -->
+        <section id="projects" aria-labelledby="projects-h">
+            <div class="container">
+                <h2 id="projects-h">Projects</h2>
+                <div class="grid cards">
+                    <!-- Project Card 1 -->
+                    <article class="card" aria-labelledby="p1-h">
+                        <div class="muted">[Proprietary -- No Image]</div>
+                        <h3 id="p1-h">Demographic Targeting Model for Sampling Strategy</h3>
+                        <p class="muted">Classification model + forecasting to focus survey efforts and hit demographic
+                            targets; enabled millions in annual savings.</p>
+                        <p class="muted">Tech: Python, Spark, Airflow</p>
+                    </article>
+
+                    <!-- Project Card 2 -->
+                    <article class="card" aria-labelledby="p2-h">
+                        <div class="muted"><img src="/assets/images/MAPnetv1.png"></img></div>
+                        <h3 id="p2-h">Violin Gesture ↔ Audio (Multimodal Dataset & Model)</h3>
+                        <p class="muted">Built a synchronized motion/audio/video dataset and trained models to map audio
+                            features to bowing gestures.</p>
+                        <p class="muted">Tech: PyTorch, Signal Processing</p>
+                        <p><a href="https://arxiv.org/abs/2203.12829">Read more</a></p>
+                    </article>
+
+                    <!-- Project Card 3 -->
+                    <article class="card" aria-labelledby="p3-h">
+                        <div class="muted"><img src="/assets/images/harmony_analyzer_ui_small.png"></img></div>
+                        <h3 id="p3-h">Interactive Frequency Dissonance Visualization</h3>
+                        <p class="muted">Real-time tone synthesis and visualization with optimization that nudges
+                            pitches toward harmony.</p>
+                        <p class="muted">Tech: Python, DSP, Optimization</p>
+                        <p><a href="https://github.com/adamzukerman/harmony_experimentation">Read more</a></p>
+                    </article>
+
+                    <!-- Project Card 4 -->
+                    <article class="card" aria-labelledby="p4-h">
+                        <div class="muted"><img src="/assets/images/Toxic Tweet Preview.png"></div>
+                        <h3 id="p4-h">Toxic Content Detection (NLP)</h3>
+                        <p class="muted">Fine-tuned NLP models to flag and analyze toxic content in social media data.
+                        </p>
+                        <p class="muted">Tech: Python, NLP</p>
+                        <p><a
+                                href="https://github.com/adamzukerman/toxic_tweet_analysis/blob/main/Executive%20Summary%20(FGS%20Global%20Assessement).pdf">Read
+                                more</a></p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resume -->
+        <section id="resume" aria-labelledby="resume-h">
+            <div class="container">
+                <h2 id="resume-h">Resume</h2>
+                <div class="grid" style="grid-template-columns: 2fr 1fr; gap: 1.5rem;">
+                    <div class="card">
+                        <h3>Interactive Snapshot</h3>
+                        <ul>
+                            <li><strong>Current:</strong> Data Scientist — Nielsen Audience Measurement</li>
+                            <li><strong>Focus:</strong> ML for ops efficiency, forecasting, cost modeling</li>
+                            <li><strong>Skills:</strong> Python, SQL, DBT, Postgres, AWS, scikit-learn, PyTorch</li>
+                            <li><strong>Cert:</strong> AWS Cloud Practitioner</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p>
+                            Prefer a PDF? <a href="/assets/resumes/resume.pdf" download>Download my resume</a> or <a
+                                href="/assets/resumes/resume.pdf" target="_blank" rel="noopener">open it in a new
+                                tab</a>.
+                        </p>
+                        <p class="muted">You can keep this section lightweight and let the PDF carry details.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" aria-labelledby="contact-h">
+            <div class="container">
+                <h2 id="contact-h">Contact</h2>
+                <div class="grid" style="grid-template-columns: 2fr 1fr; gap: 1.5rem;">
+                    <div>
+                        <p>Best way to reach me: <a href="mailto:adam@adamzukerman.com">adam@adamzukerman.com</a></p>
+                        <p>
+                            Also find me on
+                            <a href="https://www.linkedin.com/in/adam-zukerman" target="_blank"
+                                rel="noopener">LinkedIn</a> and
+                            <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>.
+                        </p>
+                    </div>
+                    <form class="card" method="post" action="/contact" aria-label="Simple contact form (optional)">
+                        <label>
+                            <span class="muted">Your email</span>
+                            <input class="input" name="email" type="email" required />
+                        </label>
+                        <label>
+                            <span class="muted">Message</span>
+                            <textarea class="textarea" name="message" rows="4" required></textarea>
+                        </label>
+                        <button class="btn" type="submit">Send</button>
+                        <p class="muted">(Wire-only: hook this to an email backend or service later; for now it’s just
+                            markup.)</p>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <small>&copy<span id="year"></span> Adam Zukerman. All rights reserved.</small>
         </div>
-      </div>
-    </section>
-
-    <!-- About -->
-    <section id="about" aria-labelledby="about-h">
-      <div class="container">
-        <h2 id="about-h">About</h2>
-        <div class="grid" style="grid-template-columns: 2fr 1fr; gap: 1.5rem;">
-          <div>
-            <p>
-              I'm a data scientist with a background in computer science and mathematics (B.S. + M.S.). I love the rigor of statistical modeling and the practicality of shipping systems that create value. My recent work spans ML for operational efficiency, forecasting, and building analytics/monitoring that teams actually use.
-            </p>
-            <p class="muted">
-              Outside of work, I enjoy audio/visual projects (building datasets and models around musical performance) and continuing education through systems, databases, and ML courses.
-            </p>
-          </div>
-          <aside class="card" aria-label="Highlights">
-            <h3>Highlights</h3>
-            <ul>
-              <li>Conference presenter (internal & external) on demographic targeting.</li>
-              <li>Built dashboards for continuous data quality monitoring.</li>
-              <li>Mentored teammates and led cross-functional updates.</li>
-              <li>AWS Cloud Practitioner (verification on request).</li>
-            </ul>
-          </aside>
-        </div>
-      </div>
-    </section>
-
-    <!-- Projects -->
-    <section id="projects" aria-labelledby="projects-h">
-      <div class="container">
-        <h2 id="projects-h">Projects</h2>
-        <div class="grid cards">
-          <!-- Project Card 1 -->
-          <article class="card" aria-labelledby="p1-h">
-            <div class="muted">Thumbnail / image</div>
-            <h3 id="p1-h">Demographic Targeting Model for Sampling Strategy</h3>
-            <p class="muted">Classification model + forecasting to focus survey efforts and hit demographic targets; enabled $7.2M annual savings.</p>
-            <p class="muted">Tech: Python, scikit-learn, Forecasting, Optimization</p>
-            <p><a href="/projects/demographic-targeting.html">Read more</a></p>
-          </article>
-
-          <!-- Project Card 2 -->
-          <article class="card" aria-labelledby="p2-h">
-            <div class="muted">Thumbnail / image</div>
-            <h3 id="p2-h">Violin Gesture ↔ Audio (Multimodal Dataset & Model)</h3>
-            <p class="muted">Built a synchronized motion/audio/video dataset and trained models to map audio features to bowing gestures.</p>
-            <p class="muted">Tech: PyTorch, Signal Processing</p>
-            <p><a href="/projects/violin-gesture-audio.html">Read more</a></p>
-          </article>
-
-          <!-- Project Card 3 -->
-          <article class="card" aria-labelledby="p3-h">
-            <div class="muted">Thumbnail / image</div>
-            <h3 id="p3-h">Interactive Frequency Dissonance Visualization</h3>
-            <p class="muted">Real-time tone synthesis and visualization with optimization that nudges pitches toward harmony.</p>
-            <p class="muted">Tech: Python, DSP, Optimization</p>
-            <p><a href="/projects/dissonance-visualization.html">Read more</a></p>
-          </article>
-
-          <!-- Project Card 4 -->
-          <article class="card" aria-labelledby="p4-h">
-            <div class="muted">Thumbnail / image</div>
-            <h3 id="p4-h">Toxic Content Detection (NLP)</h3>
-            <p class="muted">Fine-tuned NLP models to flag and analyze toxic content in social media data.</p>
-            <p class="muted">Tech: Python, NLP</p>
-            <p><a href="/projects/toxic-content-detection.html">Read more</a></p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Resume -->
-    <section id="resume" aria-labelledby="resume-h">
-      <div class="container">
-        <h2 id="resume-h">Resume</h2>
-        <div class="grid" style="grid-template-columns: 2fr 1fr; gap: 1.5rem;">
-          <div class="card">
-            <h3>Interactive Snapshot</h3>
-            <ul>
-              <li><strong>Current:</strong> Data Scientist — Nielsen Audience Measurement</li>
-              <li><strong>Focus:</strong> ML for ops efficiency, forecasting, cost modeling</li>
-              <li><strong>Skills:</strong> Python, SQL, DBT, Postgres, AWS, scikit-learn, PyTorch</li>
-              <li><strong>Cert:</strong> AWS Cloud Practitioner</li>
-            </ul>
-          </div>
-          <div>
-            <p>
-              Prefer a PDF? <a href="/assets/resumes/resume.pdf" download>Download my resume</a> or <a href="/assets/resumes/resume.pdf" target="_blank" rel="noopener">open it in a new tab</a>.
-            </p>
-            <p class="muted">You can keep this section lightweight and let the PDF carry details.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact" aria-labelledby="contact-h">
-      <div class="container">
-        <h2 id="contact-h">Contact</h2>
-        <div class="grid" style="grid-template-columns: 2fr 1fr; gap: 1.5rem;">
-          <div>
-            <p>Best way to reach me: <a href="mailto:adam@adamzukerman.com">adam@adamzukerman.com</a></p>
-            <p>
-              Also find me on
-              <a href="https://www.linkedin.com/in/adam-zukerman" target="_blank" rel="noopener">LinkedIn</a> and
-              <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>.
-            </p>
-          </div>
-          <form class="card" method="post" action="/contact" aria-label="Simple contact form (optional)">
-            <label>
-              <span class="muted">Your email</span>
-              <input class="input" name="email" type="email" required />
-            </label>
-            <label>
-              <span class="muted">Message</span>
-              <textarea class="textarea" name="message" rows="4" required></textarea>
-            </label>
-            <button class="btn" type="submit">Send</button>
-            <p class="muted">(Wire-only: hook this to an email backend or service later; for now it’s just markup.)</p>
-          </form>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="container">
-      <small>&copy<span id="year"></span> Adam Zukerman. All rights reserved.</small>
-    </div>
-  </footer>
-  <script src="/assets/script.js"></script>
+    </footer>
+    <script src="/assets/script.js"></script>
 
 </body>
-</html>
 
+</html>
