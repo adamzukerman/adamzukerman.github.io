@@ -33,7 +33,7 @@
     event.preventDefault();
     if (!submitBtn) return;
 
-    setStatus('info', 'Sending…');
+    setStatus('info', 'Sending...');
     submitBtn.disabled = true;
 
     try {

@@ -1,16 +1,25 @@
 # contact_app.py
 import os
+import logging
 import smtplib
 from email.message import EmailMessage
 from flask import Flask, request, jsonify
 
 app = Flask(__name__)
+app.logger.setLevel(logging.INFO)
 
 SMTP_HOST = os.environ["SMTP_HOST"]
 SMTP_PORT = int(os.environ.get("SMTP_PORT", 587))
 SMTP_USER = os.environ["SMTP_USER"]
 SMTP_PASS = os.environ["SMTP_PASS"]
 TARGET_EMAIL = os.environ["TARGET_EMAIL"]
+app.logger.info(
+    "SMTP config host=%s port=%s user=%s",
+    SMTP_HOST,
+    SMTP_PORT,
+    SMTP_USER,
+)
+
 
 def send_mail(sender, message):
     email = EmailMessage()
