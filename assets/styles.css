@@ -247,6 +247,25 @@ section h2 {
   min-height: 6rem;
 }
 
+.form-status {
+  min-height: 1.25rem;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.form-status.is-success {
+  color: var(--accent);
+}
+
+.form-status.is-error {
+  color: #ff6b6b;
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
 /* ——— Footer ——— */
 footer {
   padding: 2rem 0;
