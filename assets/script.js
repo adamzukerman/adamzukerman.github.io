@@ -46,7 +46,7 @@
       const payload = await response.json().catch(() => ({}));
       if (response.ok && payload.ok) {
         form.reset();
-        setStatus('success', 'Message sent! I’ll get back to you soon.');
+        setStatus('success', 'Message sent! I\'ll get back to you soon.');
       } else {
         const error = payload.error || 'Unable to send your message right now.';
         setStatus('error', error);
