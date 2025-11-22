@@ -1,0 +1,3 @@
+[submodule "assets/resumes"]
+	path = assets/resumes
+	url = https://github.com/adamzukerman/resumes.git
