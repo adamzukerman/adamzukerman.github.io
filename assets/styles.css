@@ -15,6 +15,8 @@
   --ring: #294b72;
   --border: rgba(230, 236, 242, 0.12);
   /* subtle light border on dark */
+  --bg-tint: rgba(11, 13, 16, 0.85);
+  --surface-tint: rgba(20, 24, 29, 0.9);
 }
 
 :root[data-theme="light"] {
@@ -27,6 +29,8 @@
   --ring: #b7d7ff;
   --border: rgba(15, 23, 32, 0.12);
   /* subtle dark border on light */
+  --bg-tint: rgba(255, 255, 255, 0.9);
+  --surface-tint: rgba(243, 246, 249, 0.92);
 }
 
 /* Optional: respect OS preference on first load if no saved theme */
@@ -40,6 +44,8 @@
     --card: #ffffff;
     --ring: #b7d7ff;
     --border: rgba(15, 23, 32, 0.12);
+    --bg-tint: rgba(255, 255, 255, 0.9);
+    --surface-tint: rgba(243, 246, 249, 0.92);
   }
 }
 
@@ -55,9 +61,32 @@ body {
 
 body {
   margin: 0;
+  min-height: 100vh;
   font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
   background-color: var(--bg);
   color: var(--text);
+  position: relative;
+  overflow-x: hidden;
+}
+
+#bg-stage {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(56, 189, 248, 0.18), transparent 35%),
+    radial-gradient(circle at 80% 0%, rgba(244, 114, 182, 0.15), transparent 40%),
+    #050816;
+}
+
+.page-content {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  backdrop-filter: blur(4px);
+  padding-bottom: 3rem;
 }
 
 img {
@@ -86,9 +115,9 @@ header {
   top: 0;
   z-index: 10;
   backdrop-filter: blur(8px);
-  background-color: var(--bg);
-  /* fallback safe */
+  background-color: var(--bg-tint);
   border-bottom: 1px solid var(--border);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
 }
 
 .nav {
@@ -171,7 +200,7 @@ header {
   padding: .7rem 1rem;
   border-radius: .8rem;
   border: 1px solid var(--border);
-  background: var(--surface);
+  background: var(--surface-tint);
   color: var(--text);
   font-weight: 600;
   margin-top: 1rem;
@@ -187,7 +216,8 @@ header {
 section {
   padding: 3rem 0;
   border-top: 1px solid var(--border);
-  background-color: var(--bg);
+  background-color: var(--bg-tint);
+  backdrop-filter: blur(6px);
 }
 
 section h2 {
@@ -205,10 +235,11 @@ section h2 {
 }
 
 .card {
-  background: var(--card);
+  background: var(--surface-tint);
   padding: 1rem;
   border-radius: 1rem;
   border: 1px solid var(--border);
+  box-shadow: 0 15px 45px rgba(2, 6, 23, 0.45);
 }
 
 .card h3 {
@@ -222,9 +253,8 @@ section h2 {
 
 .card-thumb {
   height: 140px;
-  /* whatever height works */
   border-radius: 0.5rem;
-  background: var(--surface);
+  background: var(--surface-tint);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -240,7 +270,7 @@ section h2 {
   padding: .6rem;
   border-radius: .6rem;
   border: 1px solid var(--border);
-  background: var(--surface);
+  background: var(--surface-tint);
   color: var(--text);
 }
 
@@ -272,7 +302,8 @@ footer {
   padding: 2rem 0;
   border-top: 1px solid var(--border);
   color: var(--muted);
-  background-color: var(--bg);
+  background-color: var(--bg-tint);
+  backdrop-filter: blur(6px);
 }
 
 /* ——— Responsive helpers ——— */
